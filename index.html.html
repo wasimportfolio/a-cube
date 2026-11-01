@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>A Cube – Car Care &amp; Detailing</title>
+<link rel="icon" type="image/png" href="images/favicon.png">
+<meta property="og:image" content="images/logo.png"><meta property="og:title" content="A Cube – Car Care &amp; Detailing">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@500;700&family=Barlow:wght@400;500;600&display=swap">
+<style>
+:root{--bg:#fbf8f3;--card:#fff;--ink:#17120b;--mute:#6d6354;--line:#eadfce;--amber:#f08a00;--deep:#c96d00;--tint:#fff1dc;--r:18px;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+*,*::before,*::after{box-sizing:inherit}
+html{scroll-behavior:smooth;scroll-padding-top:92px}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 17px/1.65 Barlow,system-ui,sans-serif;overflow-x:hidden}
+h1,h2,h3{font-family:'Chakra Petch',system-ui,sans-serif;line-height:1.08;margin:0}
+a{color:inherit;text-decoration:none}
+:focus-visible{outline:2px solid var(--deep);outline-offset:3px}
+.wrap{max-width:1180px;margin:0 auto;padding:0 22px}
+section{padding:92px 0}
+h2{font-size:clamp(30px,4.6vw,50px);font-weight:700}
+.sub{color:var(--mute);max-width:58ch;margin:14px 0 42px}
+.btn{display:inline-block;background:var(--amber);color:#fff;font:700 16px 'Chakra Petch',sans-serif;padding:14px 28px;border-radius:50px;border:0;cursor:pointer;box-shadow:0 8px 22px rgba(240,138,0,.35);transition:transform .25s,box-shadow .25s}
+.btn:hover{transform:translateY(-3px);box-shadow:0 14px 30px rgba(240,138,0,.45)}
+.btn.o{background:transparent;color:var(--ink);box-shadow:none;border:1.5px solid var(--ink)}
+.btn.o:hover{background:var(--ink);color:#fff}
+/* image slots: set --img inline; label only shows until the photo loads */
+.im{position:relative;background:var(--img,none),linear-gradient(135deg,#f6ead7,#efdcc0);background-size:cover;background-position:center}
+.im::before{content:attr(data-label);position:absolute;inset:0;display:grid;place-items:center;color:#b79a6c;font:500 13px 'Chakra Petch';letter-spacing:.12em;text-align:center;padding:10px}
+.im[style*=url]::before{display:none}
+/* nav */
+nav{position:fixed;inset:0 0 auto;z-index:30;padding-top:env(safe-area-inset-top,0px);background:rgba(251,248,243,.88);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;height:82px;gap:14px}
+.logo{display:flex;align-items:center;gap:10px;font:700 29px 'Chakra Petch';letter-spacing:.03em}.logo b{color:var(--amber)}.logo small{font-size:10px;letter-spacing:.3em;margin-left:8px;color:var(--mute)}
+nav ul{display:flex;gap:28px;list-style:none;margin:0;padding:0;font-weight:500;font-size:15px}
+nav ul a{color:var(--mute);transition:color .2s}nav ul a:hover{color:var(--deep)}
+.mb{display:none;background:#fff;border:1px solid var(--line);width:42px;height:42px;border-radius:10px;font-size:20px;cursor:pointer;color:var(--ink)}
+@media(max-width:900px){nav ul{display:none}.mb{display:block}nav.open ul{display:flex;flex-direction:column;position:absolute;top:100%;left:0;right:0;background:var(--bg);padding:20px 22px;gap:18px;border-bottom:1px solid var(--line)}nav .btn{padding:11px 20px}}
+.tk{background:var(--ink);color:#fff;overflow:hidden;padding:16px 0;border-block:3px solid var(--amber)}
+.tk div{display:flex;gap:46px;width:max-content;animation:tk 32s linear infinite;font:700 20px 'Chakra Petch'}
+.tk i{color:var(--amber);font-style:normal}
+@keyframes tk{to{transform:translateX(-50%)}}
+.lg{width:64px;height:64px;border-radius:16px;background:#000;object-fit:cover;box-shadow:0 4px 14px rgba(70,40,0,.25)}
+.fl{display:block;width:200px;height:200px;margin:0 auto 18px;border-radius:26px;box-shadow:0 18px 40px rgba(70,40,0,.25)}
+.hl{position:absolute;z-index:2;left:50%;bottom:-44px;width:124px;height:124px;transform:translateX(-50%);border-radius:22px;background:#000;border:3px solid #fff;box-shadow:0 14px 34px rgba(70,40,0,.3)}
+/* hero */
+.hero{padding:112px 0 60px;background:radial-gradient(70% 60% at 85% 20%,var(--tint),transparent 70%)}
+.hg{display:grid;grid-template-columns:1.05fr .95fr;gap:56px;align-items:center}
+.hero h1{font-size:clamp(40px,6vw,80px);font-weight:700;letter-spacing:-.01em}
+.hero h1 span{color:var(--amber);white-space:nowrap}
+.hero p{color:var(--mute);max-width:48ch;margin:22px 0 32px;font-size:19px}
+.cta{display:flex;gap:14px;flex-wrap:wrap}
+.hf{position:relative}
+.hf::before{content:"";position:absolute;inset:26px -20px -20px 26px;background:var(--amber);border-radius:var(--r);opacity:.9}
+.hf .im{position:relative;aspect-ratio:1/1.02;border-radius:var(--r);box-shadow:0 30px 60px rgba(70,40,0,.22);animation:rise 1s both}
+@keyframes rise{from{opacity:0;transform:translateY(30px) scale(.97)}}
+.bd{position:absolute;z-index:2;background:#fff;border-radius:14px;padding:12px 18px;box-shadow:0 14px 34px rgba(70,40,0,.18);font:700 15px 'Chakra Petch';animation:fl 5s ease-in-out infinite alternate}
+.bd small{display:block;font:500 12px Barlow;color:var(--mute)}
+.b1{left:-26px;bottom:60px}.b2{right:-14px;top:36px;animation-delay:-2.5s}
+@keyframes fl{to{transform:translateY(-10px)}}
+@media(max-width:900px){.hg{grid-template-columns:1fr;gap:44px}.hf{max-width:480px}.hf .im{aspect-ratio:4/3.6}.b1{left:-6px}.b2{right:-6px}}
+/* facts strip */
+.facts{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(200px,100%),1fr));background:var(--ink);color:#fff;border-radius:var(--r);overflow:hidden;margin-top:70px}
+.facts div{padding:26px;border-right:1px solid #ffffff22}
+.facts b{display:block;font:700 34px 'Chakra Petch';color:var(--amber)}.facts span{color:#d9cdb9;font-size:15px}
+/* services */
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(260px,100%),1fr));gap:22px}
+.sv{background:var(--card);border:1px solid var(--line);border-radius:var(--r);overflow:hidden;transition:transform .35s,box-shadow .35s}
+.sv:hover{transform:translateY(-8px);box-shadow:0 24px 48px rgba(70,40,0,.14)}
+.fr{overflow:hidden;aspect-ratio:4/3}.fr .im{height:100%;transition:transform .8s}.sv:hover .fr .im{transform:scale(1.08)}
+.sv .tx{padding:22px 24px 26px}.sv h3{font-size:23px}.sv p{margin:8px 0 0;color:var(--mute);font-size:15.5px}
+.sv em{display:inline-block;margin-top:12px;color:var(--deep);font:700 14px 'Chakra Petch';font-style:normal}
+/* about */
+.ab{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
+.ab .im{aspect-ratio:5/4;border-radius:var(--r);box-shadow:0 24px 50px rgba(70,40,0,.18)}
+.pts{display:grid;gap:18px;margin-top:26px}.pts div{padding-left:20px;border-left:3px solid var(--amber)}
+.pts b{font:700 19px 'Chakra Petch'}.pts p{margin:2px 0 0;color:var(--mute);font-size:15.5px}
+@media(max-width:900px){.ab{grid-template-columns:1fr;gap:34px}}
+.alt{background:#fff;border-block:1px solid var(--line)}
+/* before after */
+.bag{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(380px,100%),1fr));gap:28px}
+.ba{position:relative;aspect-ratio:16/10;border-radius:var(--r);overflow:hidden;user-select:none;box-shadow:0 20px 44px rgba(70,40,0,.16)}
+.ba .l{position:absolute;inset:0}.ba .af{clip-path:inset(0 0 0 var(--p,50%))}
+.tag{position:absolute;top:14px;z-index:2;background:rgba(23,18,11,.78);color:#fff;font:700 12px 'Chakra Petch';letter-spacing:.14em;padding:6px 12px;border-radius:30px}
+.tag.a{right:14px;background:var(--amber)}.tag.b{left:14px}
+.bar{position:absolute;top:0;bottom:0;left:var(--p,50%);width:3px;background:#fff;z-index:3;pointer-events:none;box-shadow:0 0 12px #0006}
+.bar::after{content:"\25C0  \25B6";position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);background:#fff;color:var(--deep);font-size:11px;padding:10px 12px;border-radius:30px;white-space:nowrap;box-shadow:0 4px 14px #0004}
+.ba input{position:absolute;inset:0;width:100%;height:100%;opacity:0;cursor:ew-resize;z-index:4;margin:0}
+.cap{margin:14px 4px 0;color:var(--mute);font-size:15.5px}.cap b{color:var(--ink);font-family:'Chakra Petch'}
+/* gallery */
+.gal{display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:210px;gap:14px}
+.gal .im{border-radius:14px;overflow:hidden;transition:transform .4s,box-shadow .4s}
+.gal .im:hover{transform:scale(1.025);box-shadow:0 18px 38px rgba(70,40,0,.22);z-index:2}
+.gal .w{grid-column:span 2}.gal .t{grid-row:span 2}
+@media(max-width:760px){.gal{grid-template-columns:repeat(2,1fr);grid-auto-rows:150px;gap:10px}}
+/* process */
+.steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(230px,100%),1fr));gap:22px;counter-reset:s}
+.st{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:26px;counter-increment:s}
+.st::before{content:counter(s);display:grid;place-items:center;width:44px;height:44px;border-radius:50%;background:var(--amber);color:#fff;font:700 20px 'Chakra Petch';margin-bottom:14px}
+.st h3{font-size:21px}.st p{margin:6px 0 0;color:var(--mute);font-size:15.5px}
+/* packages */
+.pk{position:relative;background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:34px 28px;transition:transform .3s,box-shadow .3s}
+.pk:hover{transform:translateY(-6px);box-shadow:0 22px 44px rgba(70,40,0,.13)}
+.pk.hot{background:var(--ink);color:#fff;border-color:var(--ink)}.pk.hot li{color:#d9cdb9;border-color:#ffffff25}
+.pk em{position:absolute;top:-13px;right:22px;background:var(--amber);color:#fff;font:700 12px 'Chakra Petch';padding:4px 14px;border-radius:30px;font-style:normal}
+.pk h3{font-size:27px;color:var(--amber)}.pk ul{list-style:none;padding:0;margin:18px 0 26px}
+.pk li{padding:9px 0;border-bottom:1px solid var(--line);color:var(--mute)}.pk li::before{content:"\2713  ";color:var(--amber);font-weight:700}
+/* reviews, faq */
+blockquote{margin:0;background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:26px}
+blockquote q{display:block;quotes:none;margin-bottom:14px}blockquote cite{font:700 15px 'Chakra Petch';font-style:normal;color:var(--deep)}
+details{border-bottom:1px solid var(--line);padding:18px 0}
+summary{cursor:pointer;font:700 20px 'Chakra Petch';list-style:none;display:flex;justify-content:space-between;gap:16px}
+summary::after{content:"+";color:var(--amber);font-size:26px;line-height:1;transition:transform .3s}details[open] summary::after{transform:rotate(45deg)}
+details p{color:var(--mute);margin:10px 0 0}
+/* contact */
+.ct{display:grid;grid-template-columns:1.1fr 1fr;gap:48px;align-items:center;background:var(--ink);color:#fff;border-radius:28px;padding:clamp(28px,5vw,64px)}
+.ct .sub{color:#d9cdb9}.ph{font:700 clamp(34px,6vw,58px) 'Chakra Petch';color:var(--amber);display:block;margin:6px 0 20px}
+form{display:grid;gap:12px}input,select{background:#ffffff12;border:1px solid #ffffff30;color:#fff;padding:14px 16px;font:inherit;border-radius:12px;width:100%}
+input::placeholder{color:#cbbfa9}select option{color:#000}
+@media(max-width:900px){.ct{grid-template-columns:1fr;gap:30px}}
+footer{padding:30px 0 40px;text-align:center;color:var(--mute);font-size:14px}
+.wa{position:fixed;right:18px;bottom:calc(18px + env(safe-area-inset-bottom,0px));z-index:30;width:60px;height:60px;border-radius:50%;background:#25d366;display:grid;place-items:center;box-shadow:0 10px 26px rgba(37,211,102,.5);transition:transform .25s;animation:pl 2.4s infinite}
+.wa:hover{transform:scale(1.1)}
+@keyframes pl{0%{box-shadow:0 10px 26px rgba(37,211,102,.5),0 0 0 0 rgba(37,211,102,.55)}70%,100%{box-shadow:0 10px 26px rgba(37,211,102,.5),0 0 0 18px rgba(37,211,102,0)}}
+.rv{opacity:0;transform:translateY(28px);transition:opacity .8s,transform .8s}.rv.on{opacity:1;transform:none}
+@media(max-width:640px){section{padding:62px 0}.hero{padding:92px 0 60px}.facts div{border-right:0;border-bottom:1px solid #ffffff22}.lg{width:54px;height:54px}nav .wrap{height:70px}.hl{width:92px;height:92px;bottom:-32px}.cta .btn{flex:1;text-align:center}.bd{padding:9px 13px;font-size:13px}.wa{width:54px;height:54px}}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.rv{opacity:1;transform:none}}
+</style>
+</head>
+<body>
+<nav id="nv"><div class="wrap"><a class="logo" href="#top" aria-label="A Cube home"><img class="lg" src="images/logo.png" alt="A Cube logo" width="64" height="64"><span><b>A</b> CUBE</span></a>
+<ul><li><a href="#services">Services</a></li><li><a href="#about">Why us</a></li><li><a href="#results">Before &amp; After</a></li><li><a href="#gallery">Gallery</a></li><li><a href="#packages">Packages</a></li><li><a href="#contact">Contact</a></li></ul>
+<div style="display:flex;gap:10px;align-items:center"><a class="btn" href="tel:+919655512345">Call now</a><button class="mb" id="mb" aria-label="Menu">&#9776;</button></div></div></nav>
+
+<header class="hero" id="top"><div class="wrap">
+<div class="hg">
+<div><h1>Your car deserves <span>A Cube</span> care.</h1>
+<p>Seat covers made in our own unit, PPF, ceramic coating and 3M sunfilm. Fitted with a perfect finish, since 2018.</p>
+<div class="cta"><a class="btn" href="#contact">Book a slot</a><a class="btn o" href="#results">See the difference</a></div></div>
+<div class="hf"><div class="im" data-label="HERO IMAGE  images/hero-car.jpg" style="--img:url(images/hero-car.jpg)"></div>
+<img class="hl" src="images/logo.png" alt="A Cube" width="124" height="124"><div class="bd b1">3M Sunfilm<small>Heat rejection</small></div><div class="bd b2">Since 2018<small>Car care &amp; detailing</small></div></div>
+</div>
+<div class="facts rv"><div><b>2018</b><span>Serving car owners since</span></div><div><b>5</b><span>Core services, one workshop</span></div><div><b>Own</b><span>Seat cover manufacturing</span></div><div><b>3M</b><span>Sunfilm and protection</span></div></div>
+</div></header>
+
+<div class="tk" aria-hidden="true"><div><span>SEAT COVER <i>&#9632;</i></span><span>PPF <i>&#9632;</i></span><span>CERAMIC COATING <i>&#9632;</i></span><span>3M SUNFILM <i>&#9632;</i></span><span>PREMIUM DETAILING <i>&#9632;</i></span><span>SEAT COVER <i>&#9632;</i></span><span>PPF <i>&#9632;</i></span><span>CERAMIC COATING <i>&#9632;</i></span><span>3M SUNFILM <i>&#9632;</i></span><span>PREMIUM DETAILING <i>&#9632;</i></span></div></div>
+
+<section id="services"><div class="wrap">
+<h2 class="rv">What we do for your car</h2><p class="sub rv">Five services, each done in-house and checked before delivery.</p>
+<div class="cards rv">
+<article class="sv"><div class="fr"><div class="im" data-label="svc-seat.jpg" style="--img:url(images/svc-seat.jpg)"></div></div><div class="tx"><h3>Seat Cover</h3><p>Made in our own unit and cut to your car's exact model.</p><em>Own manufacturing</em></div></article>
+<article class="sv"><div class="fr"><div class="im" data-label="svc-ppf.jpg" style="--img:url(images/svc-ppf.jpg)"></div></div><div class="tx"><h3>PPF</h3><p>Paint protection film against stone chips, scratches and fading.</p><em>Paint protection film</em></div></article>
+<article class="sv"><div class="fr"><div class="im" data-label="svc-ceramic.jpg" style="--img:url(images/svc-ceramic.jpg)"></div></div><div class="tx"><h3>Ceramic Coating</h3><p>Deep gloss that repels water and dirt.</p><em>Long lasting protection</em></div></article>
+<article class="sv"><div class="fr"><div class="im" data-label="svc-sunfilm.jpg" style="--img:url(images/svc-sunfilm.jpg)"></div></div><div class="tx"><h3>3M Sunfilm</h3><p>A cooler cabin and protected interiors.</p><em>Heat rejection</em></div></article>
+<article class="sv"><div class="fr"><div class="im" data-label="svc-detailing.jpg" style="--img:url(images/svc-detailing.jpg)"></div></div><div class="tx"><h3>Detailing</h3><p>Interior and exterior deep clean with a perfect finish.</p><em>Premium quality</em></div></article>
+</div></div></section>
+
+<section id="about" class="alt"><div class="wrap ab">
+<div class="im rv" data-label="about-workshop.jpg" style="--img:url(images/about-workshop.jpg)"></div>
+<div class="rv"><h2>Why car owners pick A Cube</h2>
+<div class="pts"><div><b>We make our own seat covers</b><p>Fit and finish stay in our hands, not a supplier's.</p></div><div><b>3M materials</b><p>Sunfilm and protection from a brand you already know.</p></div><div><b>Clean preparation</b><p>Film and coating go on only after proper washing and decontamination.</p></div><div><b>Honest advice</b><p>We tell you what your car needs, and what it does not.</p></div></div></div>
+</div></section>
+
+<section id="results"><div class="wrap">
+<h2 class="rv">Drag to see the difference</h2><p class="sub rv">Same car, same angle. Slide the handle across.</p>
+<div class="bag rv">
+<div><div class="ba"><div class="im l" data-label="ceramic-before.jpg" style="--img:url(images/ceramic-before.jpg)"></div><div class="im l af" data-label="ceramic-after.jpg" style="--img:url(images/ceramic-after.jpg)"></div><span class="tag b">BEFORE</span><span class="tag a">AFTER</span><div class="bar"></div><input type="range" min="0" max="100" value="50" aria-label="Compare before and after"></div><p class="cap"><b>Ceramic coating.</b> Hazy paint turns to deep gloss.</p></div>
+<div><div class="ba"><div class="im l" data-label="seat-before.jpg" style="--img:url(images/seat-before.jpg)"></div><div class="im l af" data-label="seat-after.jpg" style="--img:url(images/seat-after.jpg)"></div><span class="tag b">BEFORE</span><span class="tag a">AFTER</span><div class="bar"></div><input type="range" min="0" max="100" value="50" aria-label="Compare before and after"></div><p class="cap"><b>Custom seat cover.</b> Worn seats rebuilt in a tailored fit.</p></div>
+<div><div class="ba"><div class="im l" data-label="ppf-before.jpg" style="--img:url(images/ppf-before.jpg)"></div><div class="im l af" data-label="ppf-after.jpg" style="--img:url(images/ppf-after.jpg)"></div><span class="tag b">BEFORE</span><span class="tag a">AFTER</span><div class="bar"></div><input type="range" min="0" max="100" value="50" aria-label="Compare before and after"></div><p class="cap"><b>PPF.</b> Protected paint with a clean, glossy finish.</p></div>
+<div><div class="ba"><div class="im l" data-label="sun-before.jpg" style="--img:url(images/sun-before.jpg)"></div><div class="im l af" data-label="sun-after.jpg" style="--img:url(images/sun-after.jpg)"></div><span class="tag b">BEFORE</span><span class="tag a">AFTER</span><div class="bar"></div><input type="range" min="0" max="100" value="50" aria-label="Compare before and after"></div><p class="cap"><b>3M sunfilm.</b> Less glare and heat inside the cabin.</p></div>
+</div></div></section>
+
+<section id="gallery" class="alt"><div class="wrap">
+<h2 class="rv">Recent work</h2><p class="sub rv">A look at cars that left our workshop.</p>
+<div class="gal rv">
+<div class="im w t" data-label="gal-ppf.jpg" style="--img:url(images/gal-ppf.jpg)"></div>
+<div class="im" data-label="gal-seat.jpg" style="--img:url(images/gal-seat.jpg)"></div>
+<div class="im" data-label="gal-sunfilm.jpg" style="--img:url(images/gal-sunfilm.jpg)"></div>
+<div class="im w" data-label="gal-ceramic.jpg" style="--img:url(images/gal-ceramic.jpg)"></div>
+<div class="im" data-label="gal-interior.jpg" style="--img:url(images/gal-interior.jpg)"></div>
+<div class="im" data-label="gal-workshop.jpg" style="--img:url(images/gal-workshop.jpg)"></div>
+<div class="im t" data-label="gal-wash.jpg" style="--img:url(images/gal-wash.jpg)"></div>
+<div class="im" data-label="gal-headlight.jpg" style="--img:url(images/gal-headlight.jpg)"></div>
+<div class="im w" data-label="gal-delivery.jpg" style="--img:url(images/gal-delivery.jpg)"></div>
+</div></div></section>
+
+<section><div class="wrap">
+<h2 class="rv">How a job goes</h2><p class="sub rv">Clear steps, so you always know where your car is.</p>
+<div class="steps rv"><div class="st"><h3>Inspect</h3><p>We check paint, glass and interior and agree the work with you.</p></div><div class="st"><h3>Prepare</h3><p>Deep wash and decontamination before anything goes on.</p></div><div class="st"><h3>Apply</h3><p>Film, coating or covers fitted in our workshop.</p></div><div class="st"><h3>Deliver</h3><p>Final quality check, handover and care tips.</p></div></div>
+</div></section>
+
+<section id="packages" class="alt"><div class="wrap">
+<h2 class="rv">Choose your package</h2><p class="sub rv">Pick a package or mix services. Call us for a quote for your car.</p>
+<div class="cards rv">
+<div class="pk"><h3>Care</h3><ul><li>Interior deep clean</li><li>Exterior wash and polish</li><li>Dashboard and trim dressing</li></ul><a class="btn o" href="#contact">Get quote</a></div>
+<div class="pk hot"><em>Most booked</em><h3>Protect</h3><ul><li>Ceramic coating</li><li>3M sunfilm, all windows</li><li>Headlight restoration</li></ul><a class="btn" href="#contact">Get quote</a></div>
+<div class="pk"><h3>Ultimate</h3><ul><li>Full body PPF</li><li>Ceramic coating on film</li><li>Custom seat covers</li></ul><a class="btn o" href="#contact">Get quote</a></div>
+</div></div></section>
+
+<section><div class="wrap">
+<h2 class="rv">What owners say</h2><p class="sub rv">Sample reviews. Replace with your real customer feedback.</p>
+<div class="cards rv"><blockquote><q>The coating still beads water months later. The finish is spotless.</q><cite>Customer name, SUV</cite></blockquote><blockquote><q>Seat covers fit like factory leather and the delivery was on time.</q><cite>Customer name, Sedan</cite></blockquote><blockquote><q>The cabin is far cooler after the 3M sunfilm. Worth it in summer.</q><cite>Customer name, Hatchback</cite></blockquote></div>
+</div></section>
+
+<section class="alt"><div class="wrap" style="max-width:820px">
+<h2 class="rv">Questions owners ask</h2><div class="rv" style="margin-top:28px">
+<details><summary>How long does PPF last?</summary><p>Good film lasts for years when installed and cared for properly. We explain the warranty for the film we fit.</p></details>
+<details><summary>Ceramic coating or PPF, which is better?</summary><p>PPF takes stone chips and scratches. Ceramic adds gloss and easy cleaning. Many owners fit both.</p></details>
+<details><summary>Do you make seat covers for every model?</summary><p>Yes. We manufacture them ourselves, cut to your car's model.</p></details>
+<details><summary>How many days will my car stay?</summary><p>Detailing can be same-day. PPF and full seat covers take longer. We confirm the time when you book.</p></details>
+</div></div></section>
+
+<section id="contact"><div class="wrap"><div class="ct">
+<div class="rv"><h2>Drive different</h2><p class="sub">Call or send your car details. We will confirm a slot and a price.</p><a class="ph" href="tel:+919655512345">96555 12345</a><a class="btn" href="tel:+919655512345">Call A Cube</a></div>
+<form class="rv" id="fm"><input name="n" placeholder="Your name" required aria-label="Your name"><input name="c" placeholder="Car model" required aria-label="Car model"><select name="s" aria-label="Service"><option>Seat Cover</option><option>PPF</option><option>Ceramic Coating</option><option>3M Sunfilm</option><option>Detailing</option></select><button class="btn" type="submit">Send on WhatsApp</button></form>
+</div></div></section>
+<footer><img class="fl" src="images/logo.png" alt="A Cube Car Care &amp; Detailing logo" width="200" height="200">&copy; A Cube Car Care &amp; Detailing &middot; Since 2018</footer>
+<a class="wa" href="https://wa.me/919655512345" target="_blank" rel="noopener" aria-label="Chat on WhatsApp"><svg viewBox="0 0 32 32" width="32" height="32" fill="#fff" aria-hidden="true"><path d="M16 3C9 3 3.4 8.6 3.4 15.5c0 2.3.6 4.4 1.7 6.3L3 29l7.4-2c1.8 1 3.8 1.5 5.9 1.5 6.9 0 12.6-5.6 12.6-12.5S22.900 3 16 3zm0 22.800c-1.900 0-3.700-.5-5.300-1.500l-.4-.2-4.400 1.200 1.200-4.300-.3-.4a10.300 10.300 0 0 1-1.600-5.500C5.200 9.700 10 5 16 5s10.800 4.700 10.800 10.500S21.900 25.800 16 25.800zm5.900-7.700c-.3-.2-1.900-.9-2.200-1-.3-.1-.5-.2-.7.200-.2.300-.8 1-1 1.200-.2.200-.4.200-.7.100-.3-.2-1.400-.5-2.600-1.600-1-.9-1.600-1.900-1.800-2.200-.2-.3 0-.5.100-.7l.5-.5c.2-.2.200-.3.300-.5.100-.2.100-.4 0-.6l-1-2.300c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.6.100-.9.400-.3.300-1.200 1.200-1.200 2.800s1.200 3.300 1.400 3.500c.2.200 2.400 3.700 5.800 5.100.8.300 1.400.5 1.900.7.8.3 1.600.2 2.200.1.700-.1 1.900-.8 2.200-1.500.3-.7.300-1.400.2-1.500-.1-.2-.3-.2-.6-.4z"/></svg></a>
+
+<script>
+var nv=document.getElementById('nv');document.getElementById('mb').onclick=function(){nv.classList.toggle('open')};
+nv.querySelectorAll('ul a').forEach(function(a){a.onclick=function(){nv.classList.remove('open')}});
+document.querySelectorAll('.ba').forEach(function(b){var i=b.querySelector('input');i.addEventListener('input',function(){b.style.setProperty('--p',i.value+'%')})});
+var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('on');io.unobserve(e.target)}})},{threshold:.12});
+document.querySelectorAll('.rv').forEach(function(e){io.observe(e)});
+document.getElementById('fm').onsubmit=function(e){e.preventDefault();var d=new FormData(this);window.open('https://wa.me/919655512345?text='+encodeURIComponent('Hi A Cube, I am '+d.get('n')+'. Car: '+d.get('c')+'. Service: '+d.get('s')),'_blank')};
+</script>
+</body>
+</html>
